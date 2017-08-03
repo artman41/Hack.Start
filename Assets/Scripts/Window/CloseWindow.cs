@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CloseWindow : MonoBehaviour {
 
+    public GameObject Target;
+
 	public void Close() {
-        Destroy(this.gameObject);
+        Destroy(Target);
     }
 }
