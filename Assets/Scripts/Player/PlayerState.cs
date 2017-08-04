@@ -12,7 +12,6 @@ using UnityEngine;
 public class PlayerState : MonoBehaviour{
     public static PlayerState Instance;
     public PlayerStatistics LocalData = new PlayerStatistics();
-    public List<PlayerScript> CachedScripts = new List<PlayerScript>();
 
     void Awake() {
         if (Instance == null) {

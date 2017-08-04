@@ -36,7 +36,8 @@ public class PlayerHandler : MonoBehaviour{
 
         LocalData_Copy = PlayerState.Instance.LocalData;
 
-        FileStream saveFile = File.Create($"{SaveLoc}{LocalData_Copy.Username}.binary");
+        //FileStream saveFile = File.Create($"{SaveLoc}{LocalData_Copy.Username}.binary");
+        FileStream saveFile = File.Create($"{SaveLoc}save.binary");
 
         formatter.Serialize(saveFile, LocalData_Copy);
 

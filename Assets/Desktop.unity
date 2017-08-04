@@ -267,6 +267,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 437227027}
+  - component: {fileID: 437227029}
+  - component: {fileID: 437227028}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -287,6 +289,37 @@ Transform:
   m_Father: {fileID: 1565879720}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &437227028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 437227026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1c8e6962081994ea8ccdd57ce0ee91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalData:
+    Username: 
+    CachedScripts: []
+  CachedScripts: []
+--- !u!114 &437227029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 437227026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17bc34a555e97e44af81565996b1c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalData_Copy:
+    Username: 
+    CachedScripts: []
+  SaveLoc: Saves/
+  IsSceneBeingLoaded: 0
 --- !u!1 &497423208
 GameObject:
   m_ObjectHideFlags: 0
