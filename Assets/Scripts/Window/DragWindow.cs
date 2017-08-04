@@ -12,8 +12,11 @@ public class DragWindow : MonoBehaviour, IDragHandler {
     }
 
     public void OnDrag(PointerEventData eventData) {
-        m_transform.position += new Vector3(eventData.delta.x, eventData.delta.y);
+        //Assets.Scripts.Misc.Logging.Debug.Log("On drag called");
+        if (eventData.button == PointerEventData.InputButton.Left) {
+            m_transform.position += new Vector3(eventData.delta.x, eventData.delta.y);
 
-        // magic : add zone clamping if's here.
+            // magic : add zone clamping if's here.
+        }
     }
 }
