@@ -16,13 +16,13 @@ public class GridSplit : MonoBehaviour {
 
         var scale = Camera.main.ViewportToScreenPoint(transform.localScale);
 
-        Debug.Log(scale);
+        Assets.Scripts.Misc.Logging.Debug.Log($"Camera scale: {scale}");
 
         var numRow = (scale.y - IconSize) / IconSize;
         var numCol = (scale.x - IconSize) / IconSize;
 
-        Debug.Log($"Rows: {numRow}");
-        Debug.Log($"Columns: {numCol}");
+        Assets.Scripts.Misc.Logging.Debug.Log($"Rows: {numRow}");
+        Assets.Scripts.Misc.Logging.Debug.Log($"Columns: {numCol}");
 
 
         for (int i = 0; i < numCol; i++) {
@@ -59,16 +59,16 @@ public class GridSplit : MonoBehaviour {
                     var go = Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Windows/WindowContent"));
                     go.name = "Computer";
                     var title = go.GetComponent<ContentPointer>().Title.GetComponent<Text>();
-                    //title.text = go.name;
+                    title.text = go.name;
                     go.transform.SetParent(GameObject.Find("Window Container").transform);
                     go.transform.localPosition = new Vector3(0f, 0f);
                 });
                 break;
             case "32-32_orange":
-                cb.MouseDown.AddListener(() => Debug.Log($"ORANGE"));
+                cb.MouseDown.AddListener(() => Assets.Scripts.Misc.Logging.Debug.Log($"ORANGE"));
                 break;
             default:
-                cb.MouseDown.AddListener(() => Debug.Log($"Sprite {cb.name} was clicked"));
+                cb.MouseDown.AddListener(() => Assets.Scripts.Misc.Logging.Debug.Log($"Sprite {cb.name} was clicked"));
                 break;
         }
         
